@@ -1,12 +1,16 @@
-$col-h: #212124;
-$col-h-l: #4C4C4D;
-$accent: #D82F35;
-$warm-l: #F3F1F0;
-$warm: #EAE5E2;
-$warm-d: #E2DAD9;
+$dark: #3d3d3d;
+$primary: #f7941d;
+$primary-blue: #1b1464;
+
+$headers: #000000;
+$secondary-text: #757575;
+$text: #333;
+
+$lines: #e0e0e0;
 
 $body-font-size: 14px;  
 
+@import "project/_source.scss";
 @import "project/_mixins.scss";
 @import "project/_settings.scss";
 @import "project/_typography.scss";
@@ -14,6 +18,7 @@ $body-font-size: 14px;
 @import "project/_header.scss";
 @import "project/_sections.scss";
 
+@import "project/_header.scss";
 @import "project/_footer.scss";
 
 @import "project/media.scss";

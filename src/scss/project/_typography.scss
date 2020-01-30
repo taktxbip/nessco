@@ -1,0 +1,11 @@
+h3.title {
+	font-size: 38px;
+	&:after,
+	&:before {
+		display: none;
+	}
+}
+
+.content-heading h3.title {
+	color: $primary-blue;
+}
