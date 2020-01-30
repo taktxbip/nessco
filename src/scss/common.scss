@@ -1,0 +1,20 @@
+$col-h: #212124;
+$col-h-l: #4C4C4D;
+$accent: #D82F35;
+$warm-l: #F3F1F0;
+$warm: #EAE5E2;
+$warm-d: #E2DAD9;
+
+$body-font-size: 14px;  
+
+@import "project/_mixins.scss";
+@import "project/_settings.scss";
+@import "project/_typography.scss";
+@import "project/_ui.scss";
+@import "project/_header.scss";
+@import "project/_sections.scss";
+
+@import "project/_footer.scss";
+
+@import "project/media.scss";
+
