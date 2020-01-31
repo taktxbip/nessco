@@ -37,12 +37,42 @@ gulp.task('css-inject', function () {
     // .pipe(sourcemaps.init())
     .pipe(sass()) //Компиляция sass.
     .pipe(prefix('last 2 versions','> 1%', 'ie 9'))
-		.pipe(rename('style.css'))
+		.pipe(rename('custom.css'))
 		// .pipe(sourcemaps.write())
 		.pipe(cssnano())
     .pipe(gulp.dest('app/assets//css'))
     .pipe(reload({stream:true}));
 });
+
+gulp.task('css-build', function () {
+	var config = {
+		addSourceMaps: true,
+		concatCSS: true,
+		plugins:{
+			cleanCss: {}
+		}
+	};
+	var reload = browserSync.reload;
+	return gulp.src('src/scss/common.scss')
+	.pipe(plumber({ // plumber - плагин для отловли ошибок.
+					errorHandler: notify.onError(function(err) { // nofity - представление ошибок в удобном для вас виде.
+							return {
+									title: 'Styles',
+									message: err.message
+							}
+					})
+			}))
+	// .pipe(sourcemaps.init())
+	.pipe(sass()) //Компиляция sass.
+	.pipe(prefix('last 2 versions','> 1%', 'ie 9'))
+	.pipe(rename('custom.css'))
+	// .pipe(sourcemaps.write())
+	.pipe(cssnano())
+	.pipe(gulp.dest('app/assets//css'))
+	.pipe(gulp.dest('C:/xampp/htdocs/nessco/app/design/frontend/Mgs/childtheme/web/css'))
+	.pipe(reload({stream:true}));
+});
+
 
 
 //watch
@@ -65,7 +95,7 @@ gulp.task('server', function() {
         {
             match: new RegExp (siteCSS),
             fn: function() {
-                return '/frontend/Mgs/childtheme/en_AU/css/custom_del.css" /><link rel="stylesheet" href="'+ siteUrl +'assets/css/style.css">';
+                return '/frontend/Mgs/childtheme/en_AU/css/custom_del.css" /><link rel="stylesheet" href="'+ siteUrl +'assets/css/custom.css">';
             }
         }
         ]
@@ -74,5 +104,6 @@ gulp.task('server', function() {
 
 
 
-gulp.task('inject', gulp.parallel('css-inject', 'watch-inject', 'server'));
+
 gulp.task('default', gulp.parallel('css-inject', 'watch-inject', 'server'));
+gulp.task('build', gulp.parallel('css-build'));

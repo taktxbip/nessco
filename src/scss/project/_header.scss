@@ -11,6 +11,10 @@ $na-header-height: 76px;
       font-size: 14px;
       line-height: $top-header-height;
       font-weight: 500;
+      transition: 0.2s ease-in-out;
+      &:hover {
+        color: $primary;
+      }
     }
   }
   .mobile-box {
@@ -69,11 +73,48 @@ $na-header-height: 76px;
   }
   .header-myaccount-link {
     padding: 0;
+    margin-top: 25px;
+    display: block;
+    .link-item {
+      color: #fff;
+      font-weight: 600;
+      margin-right: 20px;
+      transition: 0.2s ease-in-out;
+      &:last-child {
+        margin-right: 0;
+      }
+      i {
+        margin-right: 15px;
+      }
+      &:last-child {
+        text-transform: uppercase;
+      }
+      &:hover {
+        cursor: pointer;
+        color: $primary;
+      }
+    }
   }
 }
 
 .header .bottom-header-content {
   height: $na-header-height;
+  .minicart-wrapper .counter {
+    left: unset !important;
+    top: unset !important;
+    background: transparent !important;
+    .counter-number {
+			color: $headers;
+			font-size: 14px;
+			font-weight: 600;
+			&:before {
+				content: "(";
+			}
+			&:after {
+				content: ")";
+			}
+    }
+  }
   .extra-content {
     height: $na-header-height;
     display: flex;
@@ -99,6 +140,10 @@ $na-header-height: 76px;
   }
 }
 
+.minicart-wrapper .action.showcart:before {
+	margin-right: 5px;
+}
+
 #mainMenu {
   height: 100%;
   margin: 0;
@@ -121,8 +166,8 @@ $na-header-height: 76px;
       font-size: 20px;
       padding: 7px 32px 7px 14px;
       color: $primary-blue;
-			position: relative;
-			transition: .2s ease-in-out;
+      position: relative;
+      transition: 0.2s ease-in-out;
       &:before,
       &:after {
         content: "";
@@ -132,8 +177,8 @@ $na-header-height: 76px;
         border-radius: 5px;
         background-color: $primary-blue;
         right: 10px;
-				top: 50%;
-				transition: .2s ease-in-out;
+        top: 50%;
+        transition: 0.2s ease-in-out;
       }
       &:before {
         margin-top: -5px;
@@ -149,7 +194,7 @@ $na-header-height: 76px;
           background-color: $primary;
         }
         &:after {
-					background-color: $primary;
+          background-color: $primary;
         }
       }
     }

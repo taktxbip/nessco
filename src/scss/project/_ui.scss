@@ -4,12 +4,17 @@
   height: 46px;
   line-height: 46px;
   color: #fff;
-	font-size: 20px;
+  font-size: 20px;
   text-transform: uppercase;
   &.btn-primary {
     background-color: $primary;
     color: #fff;
     border: 1px solid $lines;
+    &:hover {
+      cursor: pointer;
+      border: 1px solid $primary-blue;
+      background-color: $primary-blue;
+    }
   }
   &.btn-promo-banner {
     background-color: #fff;
@@ -18,20 +23,44 @@
   }
 }
 
+.footer .block.newsletter .form.subscribe .actions .action.subscribe {
+  border-radius: 0;
+  font-weight: 700;
+  height: 46px;
+  line-height: 46px;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  background-color: $primary;
+  color: #fff;
+  border: 1px solid $lines;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    background-color: $primary-blue;
+  }
+}
+
 .products-grid .product-item-info .tocart.btn-cart {
-	border-radius: 0 !important;
-	font-weight: 700;
-	height: 46px;
-	line-height: 46px;
-	color: #fff;
-	font-size: 20px !important;
-	text-transform: uppercase;
-	background-color: $primary;
-	color: #fff;
-	left: unset !important;
-	border: 1px solid $lines;
-	display: inline-block !important;
-	clear: both !important;
+  border-radius: 0 !important;
+  font-weight: 700;
+  height: 46px;
+  line-height: 46px;
+  color: #fff;
+  font-size: 20px !important;
+  text-transform: uppercase;
+  background-color: $primary;
+  color: #fff;
+  right: 0;
+  border: 1px solid $lines;
+  display: inline-block !important;
+  text-align: center;
+  float: unset !important;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    background-color: $primary-blue;
+  }
 }
 
 .content-heading {
@@ -79,20 +108,18 @@
 .owl-carousel .owl-dots .owl-dot {
   span {
     border-radius: 0;
-		transition: 0.2s ease-in-out;
-		background-color: $primary-blue;
-		width: 18px;
-		height: 18px;
+    transition: 0.2s ease-in-out;
+    background-color: $primary-blue;
+    width: 18px;
+    height: 18px;
   }
   &.active span {
     background-color: $primary;
-	}
-	&:hover span {
-		background-color: $primary;
-	}
+  }
+  &:hover span {
+    background-color: $primary;
+  }
 }
-
-
 
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
@@ -108,4 +135,44 @@
 ::-ms-input-placeholder {
   /* Microsoft Edge */
   color: $secondary-text;
+}
+
+.footer .block.newsletter .form.subscribe .form-group input[type="email"],
+input[type="email"],
+input[type="text"] {
+  background-color: #fff;
+  border: 1px solid $lines;
+  border-radius: 0;
+  height: 46px;
+  line-height: 46px;
+}
+
+.owl-carousel {
+  .owl-nav > div {
+    opacity: 1;
+    visibility: visible;
+    border: none;
+    color: $primary-blue;
+    transition: 0.2s ease-in-out;
+    i {
+      font-size: 70px;
+    }
+    &.owl-prev {
+      left: -70px !important;
+    }
+    &.owl-next {
+      right: -70px !important;
+    }
+    &:not(.disabled):hover {
+      cursor: pointer;
+      color: $primary !important;
+      background: none !important;
+    }
+  }
+  .owl-next,
+  .owl-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }

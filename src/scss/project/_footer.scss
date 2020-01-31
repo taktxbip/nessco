@@ -1,0 +1,48 @@
+.footer {
+  .top-footer {
+    .content-heading {
+      display: block;
+      margin-bottom: 0;
+      h3 {
+        margin-bottom: 25px;
+      }
+      p {
+        font-size: 24px;
+        line-height: 1.2;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.footer .top-footer .block.newsletter {
+  margin: 0;
+  max-width: 100%;
+  border-radius: 0;
+  border: none;
+  form {
+		position: relative;
+		.control {
+			margin-right: 20px;
+		}
+    .choice {
+      position: absolute;
+      left: 0;
+			bottom: -60px;
+			max-width: 370px;
+			width: 100%;
+			span {
+				font-weight: 600;
+				a {
+					color: $primary-blue;
+					text-decoration: underline;
+					transition: .2s ease-in-out;
+					&:hover {
+						cursor: pointer;
+						color: $primary;
+					}
+				}
+			}
+    }
+  }
+}
