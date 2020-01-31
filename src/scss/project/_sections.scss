@@ -102,6 +102,8 @@
 		font-weight: 700;
 		border: 1px solid $lines;
 		transition: .2s ease-in-out;
+		width: 100%;
+		max-width: 280px;
 		&:hover {
 			cursor: pointer;
 			color: $primary;
