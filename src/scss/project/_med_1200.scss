@@ -1,0 +1,49 @@
+@media screen and (max-width: 1199px) {
+  .header .top-header-content .contact-us-btn {
+    display: none;
+  }
+
+  .header .top-header-content .top-custom-link li .icon {
+    display: none;
+  }
+
+  .header:not(.header6):not(.header7) .megamenu-content .nav-tabs > li > a {
+    color: #1b1464;
+    background-color: #fff;
+  }
+  .header:not(.header6):not(.header7)
+    .megamenu-content
+    .nav-tabs
+    > li.active
+    > a {
+    background-color: #1b1464;
+    color: #fff;
+  }
+  .cms-home .owl-carousel .owl-stage-outer .banner_inner_text .container {
+    padding: 15px 0 0 10px !important;
+  }
+  .cms-home .owl-carousel .owl-stage-outer .banner_inner_text h2 {
+    font-size: 40px;
+    line-height: 45px;
+  }
+  .header .account-links {
+    display: none !important;
+  }
+
+  .owl-carousel .owl-nav > div {
+    &.owl-prev {
+      left: 10px !important;
+    }
+    &.owl-next {
+      right: 10px !important;
+    }
+  }
+
+  .header .bottom-header-content {
+    display: none;
+  }
+
+  #placeholder-header {
+    height: unset !important;
+  }
+}
