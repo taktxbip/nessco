@@ -1,10 +1,13 @@
 $dark: #3d3d3d;
 $primary: #f7941d;
 $primary-blue: #1b1464;
+$c-green: #097b01;
 
 $headers: #000000;
 $secondary-text: #757575;
 $text: #333;
+
+$attention: #d82b1b;
 
 $lines: #e0e0e0;
 
@@ -17,6 +20,11 @@ $body-font-size: 14px;
 @import "project/_ui.scss";
 @import "project/_header.scss";
 @import "project/_sections.scss";
+@import "project/_product_page.scss";
+@import "project/_catalog.scss";
+@import "project/_page_products.scss";
+@import "project/_quick_order.scss";
+@import "project/_cart_page.scss";
 
 @import "project/_header.scss";
 @import "project/_footer.scss";
@@ -25,4 +33,10 @@ $body-font-size: 14px;
 @import "project/_med_1200.scss";
 @import "project/_med_992.scss";
 @import "project/_med_767.scss";
+@import "project/_med_576.scss";
 
+
+
+// .cms-index-index .page-title-wrapper {
+// 	display: block !important;
+// }

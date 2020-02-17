@@ -1,5 +1,6 @@
 .footer {
   .top-footer {
+		padding: 0;
     .content-heading {
       display: block;
       margin-bottom: 0;
@@ -15,11 +16,34 @@
   }
 }
 
+
+.footer .top-footer {
+	border-top: 1px solid $lines;
+	overflow: hidden;
+	> .container {
+		padding: 70px 15px;
+		overflow: visible;
+		position: relative;
+		&:after {
+			position: absolute;
+			top: -15px;
+			right: -160px;
+			content: "";
+			display: block;
+			width: 472px;
+			height: 430px;
+			background: url('http://nesscotradesupplies.com.au/pub/media/wysiwyg/tools.png') no-repeat;
+			z-index: -1;
+		}
+	}
+}
+
 .footer .top-footer .block.newsletter {
   margin: 0;
   max-width: 100%;
   border-radius: 0;
-  border: none;
+	border: none;
+
   form {
 		position: relative;
 		.control {

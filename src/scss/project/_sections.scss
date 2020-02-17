@@ -33,20 +33,24 @@
 
 .featured_section {
   padding-top: 40px;
-	margin-bottom: 60px;
-	position: relative;
+  margin-bottom: 60px;
+  position: relative;
 }
 
 .content-heading {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: baseline;
+	align-items: baseline;
+	.block-note {
+		display: none;
+	}
 }
 
 .product-item {
   .product-top {
     border: 1px solid $lines;
+    transition: 0.2s ease-in-out;
     a {
       border-radius: 0;
       width: 100%;
@@ -61,62 +65,69 @@
         object-position: 50% 50%;
       }
     }
-	}
-	.product-item-details {
-		.price-label {
-			display: none;
-		}
-		.price {
-			font-size: 40px;
-			font-weight: 900;
-			color: $headers;
-			float: right;
-		}
-		form {
-			text-align: center;
-		}
-	} 
+    &:hover {
+      cursor: pointer;
+      border: 1px solid $primary;
+    }
+  }
+  .product-item-details {
+    .price-label {
+      display: none;
+    }
+    .price {
+      font-size: 40px;
+      font-weight: 900;
+      color: $headers;
+      float: right;
+    }
+    form {
+      text-align: center;
+    }
+  }
 }
 
-.products-grid .product-item-info .product-item-details .product-item-name a {
-	font-weight: 400;
-	display: block;
-	@include mElipsis(17px, 2);
+.products-grid .product-item-info .product-item-details .product-item-name {
+	margin-bottom: 0;
+	min-height: 40px;
+  a {
+    font-weight: 400;
+    display: block;
+    @include mElipsis(17px, 2);
+  }
 }
-
 
 .special_catalogue_section {
-	padding: 60px 0;
-	background-color: #d8d8d8;
+  padding: 60px 0;
+  background-color: #d8d8d8;
 }
 
 .categories_section {
-	padding-top: 60px;
-	margin-bottom: 60px;
-	.banner-button button.btn {
-		margin: 0;
-		background-color: #fff;
-		color: $primary-blue;
-		font-weight: 700;
-		border: 1px solid $lines;
-		transition: .2s ease-in-out;
-		width: 100%;
-		max-width: 280px;
-		&:hover {
-			cursor: pointer;
-			color: $primary;
-			background-color: #fff;
-		}
-	}
+  padding-top: 60px;
+  margin-bottom: 60px;
+  .banner-button button.btn {
+    margin: 0;
+    background-color: #fff;
+    color: $primary-blue;
+    font-weight: 700;
+    border: 1px solid $lines;
+    transition: 0.2s ease-in-out;
+    width: 100%;
+    max-width: 280px;
+    &:hover {
+      cursor: pointer;
+      color: $primary;
+      background-color: #fff;
+    }
+  }
 }
 
 .home_our_brands {
-	padding: 80px 0;
-	margin: 0 !important;
+  padding: 80px 0;
+  margin: 0 !important;
 }
 
 .recommended_section {
-	padding: 60px 0;
-	background-color: #d8d8d8;
-	position: relative;
+  padding: 60px 0;
+  background-color: #d8d8d8;
+  position: relative;
 }

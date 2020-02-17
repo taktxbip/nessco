@@ -1,0 +1,99 @@
+.page-products {
+  .products-grid {
+    .product {
+      .btn.view-product {
+        display: none;
+      }
+      .price-box .label {
+        display: none;
+      }
+      .product-top:hover .product-label {
+        display: block;
+      }
+    }
+  }
+  .toolbar-products {
+    .list-inline {
+      position: absolute;
+      left: 0;
+    }
+    .sorter-action {
+      border-radius: 0;
+      height: 38px;
+      width: 38px;
+      padding: 0;
+      &:after {
+        transition: 0.2s ease-in-out;
+      }
+      &:hover {
+        cursor: pointer;
+        border: 1px solid $primary;
+        &:after {
+          color: $primary;
+        }
+      }
+    }
+    .form-item-select {
+      border-radius: 0;
+      height: 38px;
+      transition: 0.2s ease-in-out;
+      &:hover {
+        cursor: pointer;
+        border: 1px solid $primary;
+      }
+      select {
+        height: 38px;
+        line-height: 38px;
+        &:hover {
+          border: none;
+        }
+      }
+    }
+  }
+  .sidebar {
+    .filter-options-title {
+      text-transform: uppercase;
+      font-size: 18px;
+      font-weight: 900;
+      &:before {
+        display: none;
+      }
+    }
+  }
+  .category-product-actions {
+    height: 38px;
+    margin-bottom: 20px;
+    .filter-toggle a .icon {
+      border: 1px solid $lines;
+      height: 38px;
+      width: 38px;
+      text-align: center;
+      position: relative;
+      &:before {
+        font-size: 28px;
+        line-height: 38px;
+      }
+    }
+  }
+}
+
+.catalog-category-view.page-layout-2columns-left
+  .category-product-actions
+  .filter-toggle {
+  width: 10%;
+}
+
+
+.catalog-category-view.page-layout-2columns-left .category-product-actions .toolbar.toolbar-products {
+	width: 100%;
+}
+
+// .catalog-category-view.page-layout-2columns-left .category-product-actions .filter-toggle .title>span:before {
+// 	margin-bottom: -10px;
+// }
+
+
+.price-box.price-final_price {
+	width: 100%;
+	height: 60px;
+}

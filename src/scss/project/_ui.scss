@@ -23,6 +23,34 @@
   }
 }
 
+.breadcrumbs {
+  background: none;
+  .items > li + li:before {
+    color: $headers;
+  }
+  .items > li + li:hover {
+    cursor: pointer;
+    color: $primary;
+  }
+  li {
+    text-transform: capitalize;
+    transition: 0.2s ease-in-out;
+    &:first-child {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' x='0px' y='0px' viewBox='0 0 13 13' style='enable-background:new 0 0 13 13;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23222222;%7D%0A%3C/style%3E%3Cpath class='st0' d='M13,4.7c0,0.1-0.2,0.2-0.3,0.2h-0.9v7.7c0,0.2-0.1,0.3-0.3,0.3H8V8.4c0-0.9-0.7-1.5-1.5-1.5S4.9,7.5,4.9,8.4V13 H1.5c-0.2,0-0.3-0.1-0.3-0.3V4.9H0.3C0.1,4.9,0,4.8,0,4.6c0-0.1,0-0.2,0.1-0.3l6.2-4.3C6.4,0,6.6,0,6.7,0.1l6.2,4.3 C13,4.5,13,4.6,13,4.7z'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      margin-top: 2px;
+      display: inline-block;
+      width: 15px;
+      a {
+        color: transparent;
+        &:hover {
+          color: transparent;
+        }
+      }
+    }
+  }
+}
+
 .footer .block.newsletter .form.subscribe .actions .action.subscribe {
   border-radius: 0;
   font-weight: 700;
@@ -51,16 +79,23 @@
   text-transform: uppercase;
   background-color: $primary;
   color: #fff;
-  right: 0;
+	right: 0;
+	min-width: 170px;
   border: 1px solid $lines;
-  display: inline-block !important;
+  display: block !important;
   text-align: center;
   float: unset !important;
-  transition: 0.2s ease-in-out;
+	transition: 0.2s ease-in-out;
+	margin: 0 auto !important;
   &:hover {
     cursor: pointer;
     background-color: $primary-blue;
   }
+}
+
+
+body .minicart-wrapper .block-content {
+	min-height: calc(100vh - 50px);
 }
 
 .content-heading {
@@ -175,4 +210,59 @@ input[type="text"] {
     top: 50%;
     transform: translateY(-50%);
   }
+}
+
+body select {
+  border: 1px solid $lines;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    border: 1px solid $headers;
+  }
+  &:focus {
+    border: 1px solid $primary;
+  }
+  &:not([multiple]) {
+    background-position: 98% 45%;
+    height: 48px;
+    line-height: 48px;
+  }
+}
+
+.toolbar .pages .pagination {
+  .item {
+    padding: 0 5px;
+    display: inline-block;
+    a {
+      display: block;
+      width: 38px;
+      height: 38px;
+      border: 1px solid $lines;
+      border-radius: 0;
+      font-weight: 600;
+      transition: 0.2s ease-in-out;
+      &:hover {
+        cursor: pointer;
+        border: 1px solid $primary;
+        color: $primary;
+        font-weight: 600;
+      }
+    }
+    &.current a {
+      border: 1px solid $headers;
+      color: $headers;
+      &:hover {
+        cursor: default;
+      }
+    }
+    &.pages-item-next a {
+      padding: 0 15px;
+      width: unset;
+    }
+  }
+}
+
+
+.icon-service .icon {
+	padding: 0 10px;
 }

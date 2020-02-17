@@ -6,3 +6,8 @@ body {
 .products-grid .product-item-info .tocart.btn-cart .icon {
 	display: none !important;
 }
+
+p:empty,
+div:empty {
+	display: none;
+}

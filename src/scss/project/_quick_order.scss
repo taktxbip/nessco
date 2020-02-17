@@ -1,0 +1,230 @@
+.quickorder-index-index {
+	.breadcrumbs {
+		margin-bottom: 0;
+	}
+  .page-title-wrapper {
+    background: none !important;
+    padding: 25px 0 35px;
+    &:before {
+      display: none;
+    }
+    .page-header.h1 {
+      text-align: left;
+      color: #1b1464;
+      font-size: 54px;
+      font-weight: 700;
+    }
+  }
+  #maincontent {
+    margin-top: 0;
+  }
+  .items.data.table {
+		margin-bottom: 30px;
+		.col.qty {
+			.quickorder-box-border {
+				max-width: 110px;
+				width: 100%;
+				margin: 0 auto;
+				border: 1px solid $lines;
+				input[type=number] {
+					border: none;
+					padding: 0;
+				}
+				.inc,
+				.dec {
+					display: block;
+					padding: 0;
+					top: 0;
+					width: 35px;
+					height: 100%;
+					background-color: #f5f5f5;
+					transition: .2s ease-in-out;
+					&:hover {
+						cursor: pointer;
+						color: $primary;
+					}
+				}
+				.inc {
+					right: 0;
+					border-left: 1px solid $lines;
+				}
+				.dec {
+					left: 0;
+					border-right: 1px solid $lines;
+				}
+			}
+		}
+		tbody tr:nth-child(2n) {
+			background-color: #e6f2ff;
+		}
+    tr {
+      border: 1px solid #dadada;
+      th {
+        padding: 2px 15px;
+        background: none;
+        color: #1b1464;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-weight: 700;
+        border: none;
+      }
+      td {
+        border: none;
+        text-transform: uppercase;
+        font-size: 12px;
+				font-weight: 400;
+				min-height: 85px;
+      }
+    }
+    .action-delete {
+      &:hover {
+        cursor: pointer;
+        span {
+          color: $primary;
+        }
+      }
+      span {
+				font-size: 24px;
+        color: $headers;
+        transition: 0.2s ease-in-out;
+      }
+    }
+  }
+  .quickorder-box-border input {
+    border-radius: 0;
+    border-color: #dadada;
+  }
+  .mgz-quickorder {
+		margin-bottom: 40px;
+		.mgz-quicorder-file {
+			margin: 15px 0;
+		}
+  }
+  .mgz-quickorder .quickorder-empty-btn {
+    border-radius: 0;
+    font-weight: 700;
+    height: 46px;
+    line-height: 46px;
+    background: none;
+    color: #1b1464;
+    font-size: 20px;
+    text-transform: uppercase;
+    border: 1px solid $lines;
+    margin-bottom: 20px;
+    &:hover {
+      cursor: pointer;
+      border: 1px solid $primary;
+      color: $primary;
+    }
+  }
+  .quickorder-add-btn {
+    display: none;
+  }
+  .mylist-options-wrapper {
+    width: 250px;
+		position: relative;
+		&:after {
+			content: '';
+			position: absolute;
+			display: block;
+			top: 10px;
+			right: 50px;
+			width: 1px;
+			height: 28px;
+			background-color: $lines;
+		}
+		select:not([multiple]) {
+			background-position: 95.5% 45%;
+		}
+    #add-mylist-select {
+      width: 100% !important;
+    }
+  }
+
+  .quickorder-btn-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    > *:first-child {
+      margin-right: 15px;
+    }
+  }
+  .mgz-quicorder-file {
+    input[type="file"] {
+      display: none;
+    }
+    .file-rules {
+      margin-bottom: 0;
+    }
+    .label {
+      margin-bottom: 10px;
+      span {
+        font-size: 14px;
+        font-weight: 600;
+        color: $headers;
+      }
+    }
+    a {
+      color: #2932ed;
+      text-decoration: underline;
+      transition: 0.2s ease-in-out;
+      display: block;
+      &:hover {
+        cursor: pointer;
+        color: $primary;
+      }
+    }
+    .file-uploader-button {
+      border-radius: 0;
+      font-weight: 700;
+      height: 46px;
+      line-height: 46px;
+      background: none;
+      color: #1b1464;
+      font-size: 20px;
+      text-transform: uppercase;
+      border: 1px solid #e0e0e0;
+      margin-bottom: 20px;
+      padding: 0 50px;
+      transition: 0.2s ease-in-out;
+      &:hover {
+        cursor: pointer;
+        color: $primary;
+        border: 1px solid $primary;
+      }
+    }
+  }
+  .mgz-quickorder-action {
+		#addtolist-footer-message {
+			color: #097c00;
+			font-size: 12px;
+			font-weight: 700;
+			margin-top: 15px;
+		}
+    .quickorder-grand-total {
+			text-align: right;
+			margin: 0;
+      span {
+				font-weight: 600;
+				margin-right: 10px;
+				text-transform: capitalize;
+				color: #1b1464;
+				font-size: 14px;
+				&.quickorder-grand-total-price {
+					font-weight: 900;
+					font-size: 56px;
+					color: $headers;
+					margin-right: 0;
+				}
+      }
+    }
+    .addtocart:hover {
+      cursor: pointer;
+      background-color: #1b1464;
+      border-color: #1b1464;
+    }
+  }
+  .top-footer {
+    border-top: 1px solid $lines;
+  }
+}

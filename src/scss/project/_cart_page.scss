@@ -1,0 +1,129 @@
+.checkout-cart-index
+  .cart-summary
+  .checkout-methods-items
+  .item
+  .action.checkout {
+  border-radius: 0;
+  background-color: $primary;
+  border: 1px solid $lines;
+  font-weight: 700;
+  height: 46px;
+  line-height: 46px;
+  color: #fff;
+  font-size: 20px;
+  padding: 0 25px;
+  transition: 0.2s ease-in-out;
+  &:hover {
+    cursor: pointer;
+    background-color: $primary-blue;
+    border: 1px solid $primary-blue;
+  }
+}
+
+.checkout-cart-index .cart-summary .checkout-methods-items .item {
+  text-align: right;
+}
+
+.checkout-cart-index .checkout-extra > .block > .title {
+  transition: 0.2s ease-in-out;
+  &.active {
+    background-color: #fff;
+    color: $primary-blue;
+    border-bottom-color: $primary-blue;
+    strong {
+      font-weight: 700;
+    }
+  }
+  &:hover {
+    cursor: pointer;
+    border-bottom-color: $primary-blue;
+  }
+}
+
+#shopping-cart-table .field.qty > .control {
+  border-radius: 0;
+  border: 1px solid $lines;
+  width: 100%;
+  max-width: 110px;
+  .edit-qty {
+    position: absolute;
+    height: 100%;
+    background-color: #f5f5f5;
+    top: 0 !important;
+    width: 34px;
+    transition: 0.2s ease-in-out;
+    padding: 0 !important;
+    &:hover {
+      cursor: pointer;
+      color: $primary;
+    }
+    &.minus {
+      left: 0;
+      border-right: 1px solid $lines;
+    }
+    &.plus {
+      right: 0 !important;
+      border-left: 1px solid $lines;
+    }
+  }
+  input {
+    border: none;
+    padding: 0;
+  }
+}
+
+#shopping-cart-table .field.qty > .control span.edit-qty {
+  line-height: 40px;
+}
+
+.checkout-cart-index #shopping-cart-table tbody tr td.col.qty .input-text.qty {
+  width: 100%;
+}
+
+.checkout-index-index {
+  .breadcrumbs {
+		margin-bottom: 0;
+		padding-bottom: 0;
+  }
+  #maincontent {
+    margin-top: -30px;
+  }
+}
+
+.checkout-index-index .authentication-wrapper {
+	margin-bottom: 30px;
+	position: relative;
+  .action-auth-toggle {
+		position: absolute;
+		top: -32px;
+		right: 0;
+    border-radius: 0;
+    border: none;
+    background-color: $primary-blue;
+    height: 36px;
+    line-height: 36px;
+    padding: 0;
+    margin: 0;
+    span {
+      color: #fff;
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+}
+
+
+.checkout-index-index #shipping-method-buttons-container .action {
+	border-radius: 0;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: 700;
+	padding: 0;
+	height: 44px;
+	&:hover {
+		cursor: pointer;
+		background-color: $primary;
+		border: 1px solid $primary;
+	}
+}

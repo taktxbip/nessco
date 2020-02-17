@@ -1,0 +1,85 @@
+.catalog-category-view {
+	.breadcrumbs {
+		margin-bottom: 0;
+	}
+	#maincontent {
+		margin-top: 25px;
+	}
+	.page-title-wrapper {
+    background: none !important;
+    padding: 0;
+    &:before {
+      display: none;
+    }
+    .page-header.h1 {
+      text-align: left;
+      color: #1b1464;
+      font-size: 54px;
+      font-weight: 700;
+    }
+  }
+  .landing-categories {
+    &--item {
+      h2 {
+        color: #fff;
+        font-size: 18px;
+        font-weight: 900;
+      }
+      .btn.btn-primary {
+				background: none;
+        box-shadow: none;
+        padding: 0 20px;
+        height: auto;
+        min-width: 150px;
+        border: 1px solid $lines;
+				border-radius: 0;
+				color: $primary-blue;
+				&:hover {
+					cursor: pointer;
+					border: 1px solid $primary;
+					color: $primary;
+					background: none;
+				}
+			}
+			&:hover {
+				cursor: pointer;
+				.btn.btn-primary {
+					background: none;
+					color: $primary;
+				}
+			}
+		}
+		&--count {
+			background-color: #fff;
+			color: $secondary-text;
+			font-weight: 400;
+		}
+		&--thumb {
+			border: 1px solid $primary;
+		}
+	}
+	.sidebar .mgs-ajax-layer-item {
+		margin-left: 5px;
+		color: $headers;
+	}
+}
+
+
+.sidebar .block.filter .block-title.filter-title {
+	display: block;
+	text-transform: uppercase;
+	font-size: 28px;
+	margin-bottom: 5px;
+}
+
+.block.filter .block-content.filter-content .filter-options-item .filter-options-content ol.items .item {
+	border: none;
+}
+
+.block.filter .block-content.filter-content .filter-options-item .filter-options-title {
+	margin-bottom: 0;
+}
+
+.block.filter .block-content.filter-content .filter-options-item {
+	margin-bottom: 25px;
+}
